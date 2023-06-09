@@ -5,6 +5,7 @@ import {
 import './App.css';
 import Layout from './components/Layout';
 import BookList from './components/books/BookList';
+import Categories from './components/categories/Categories';
 
 const App = () => (
   <div className="App">
@@ -13,9 +14,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<BookList />} />
-            {/* <Route path="home" element={<BookList />} /> */}
-            {/* <Route path="/" element={<Books />} /> */}
-            {/* <Route path="calculator" element={<CalculatorPage />} /> */}
+            <Route path="categories" element={<Categories />} />
           </Route>
         </Routes>
       </div>
