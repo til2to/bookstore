@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  padding-top: 3%;
+}
+
+.title {
+  font-weight: bold;
+  color: #858694;
+}
+
+.drop-down {
+  padding: 1%;
+  border: 1px solid #e0e0e0;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+
+form select {
+  width: 25%;
+  border-radius: 2px;
+  color: #858694;
+}
+
+input {
+  border: 1px solid #e0e0e0;
+  padding: 1%;
+  width: 50%;
+  border-radius: 2px;
+}
+
+form button {
+  padding: 1% 4%;
+  background-color: #1390ff;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+}

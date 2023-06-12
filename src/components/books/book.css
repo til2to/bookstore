@@ -1,0 +1,119 @@
+.each-book {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  margin-top: 2.5%;
+}
+
+ul.book {
+  padding: 0;
+}
+
+.button-items {
+  color: #587894;
+}
+
+.book-buttons {
+  margin-top: 4%;
+}
+
+.book-details {
+  padding: 2%;
+  width: 100%;
+  flex: 0.5;
+}
+
+.menu-items li:first-child {
+  margin-left: 0;
+}
+
+.book-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.details li:nth-child(1) {
+  margin-bottom: 0.5%;
+  font-weight: bold;
+  color: #858694;
+}
+
+.details li:nth-child(2) {
+  font-size: 25px;
+}
+
+.details li:nth-child(3) {
+  color: #b6d0e7;
+}
+
+.menu-items.book-buttons li:nth-child(1) .book-items {
+  margin-bottom: 0.5%;
+  font-size: 14px;
+  color: #b6d0e7;
+}
+
+.menu-items.book-buttons li:nth-child(2) .book-items {
+  font-size: 14px;
+  color: #b6d0e7;
+}
+
+.menu-items.book-buttons li:nth-child(3) .book-items {
+  font-size: 14px;
+  color: #b6d0e7;
+}
+
+.status-container {
+  display: flex;
+}
+
+.status {
+  width: 100%;
+  display: flex;
+  padding: 2%;
+  flex: 0.25;
+}
+
+.progress-status {
+  width: 50%;
+  height: auto;
+  padding: 7%;
+}
+
+.status-percentage {
+  width: 100%;
+  padding: 6%;
+}
+
+.percentage {
+  font-size: 33px;
+}
+
+.complete {
+  color: #858694;
+}
+
+.chapter {
+  flex: 0.25;
+  width: 100%;
+  padding: 2%;
+}
+
+.current-chapter {
+  color: #c0c0c0;
+  margin: 1%;
+}
+
+.chapter-details span {
+  color: #858694;
+  padding: 2%;
+}
+
+.chapter button {
+  background-color: #1390ff;
+  color: #fff;
+  border: none;
+  padding: 3% 6%;
+  border-radius: 3px;
+  margin-top: 10%;
+}
