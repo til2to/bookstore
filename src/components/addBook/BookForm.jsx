@@ -8,9 +8,11 @@ const BookForm = () => (
     <form className="book-form" onSubmit={() => {}}>
       <input type="text" placeholder="Book title" />
       <select className="drop-down" disabled>
-        <option value="">Category</option>
+        <option value="">Author</option>
+        <option value="non-fiction">Frank Herbert</option>
+        <option value="fantasy">Suzanne Collins</option>
       </select>
-      <button type="button">ADD BOOK</button>
+      <button type="submit">ADD BOOK</button>
     </form>
   </div>
 );
