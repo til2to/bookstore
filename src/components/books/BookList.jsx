@@ -6,14 +6,6 @@ import BookForm from '../addBook/BookForm';
 import './book-list.css';
 import { generateUniqueId } from '../navigationsLinks';
 
-// let counter = 0;
-
-// // generate unique numbers
-// const generateUniqueId = () => {
-//   counter += 1;
-//   return `menu-item-${counter}`;
-// };
-
 const BookList = () => {
   const { books } = useSelector((store) => store.books);
 
