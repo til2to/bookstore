@@ -27,6 +27,7 @@
 - **[Css]**
 - **[JavaScript]**
 - **[ReactJs]**
+- **Redux**
 
 <!-- Features -->
 
@@ -34,6 +35,7 @@
 
 - **[JavaScript]**
 - **[React_functional_components]**
+- **Redux toolkit**
 - **React routing**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
