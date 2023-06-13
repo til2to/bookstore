@@ -27,49 +27,53 @@ const Book = ({ bookItem }) => {
       stroke: color,
     },
   };
+  if (bookItem) {
+    return (
+      <div className="each-book">
+        <div className="book-details">
+          <ul className="details">
+            <li>{bookItem.category}</li>
+            <li>{bookItem.title}</li>
+            <li>{bookItem.author}</li>
+          </ul>
 
+          <ul className="menu-items book-buttons">
+            {bookButtons.map((button) => (
+              <li key={button.id}>
+                <NavLink className="book-items">
+                  {button.title}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="status">
+          <div className="progress-status">
+            <CircularProgressbar
+              value={progressValue}
+              styles={progressStyles}
+            />
+          </div>
+
+          <div className="status-percentage">
+            <div className="percentage values">{bookItem.completed}</div>
+            <div className="complete values">completed</div>
+          </div>
+        </div>
+
+        <div className="chapter">
+          <div className="chapter-details">
+            <div className="current-chapter">CURRENT CHAPTER</div>
+            <span>{bookItem.chapter}</span>
+          </div>
+          <button type="button">UPDATE PROGRESS</button>
+        </div>
+      </div>
+    );
+  }
   return (
-    <div className="each-book">
-      <div className="book-details">
-        <ul className="details">
-          <li>{bookItem.category}</li>
-          <li>{bookItem.title}</li>
-          <li>{bookItem.author}</li>
-        </ul>
-
-        <ul className="menu-items book-buttons">
-          {bookButtons.map((button) => (
-            <li key={button.id}>
-              <NavLink className="book-items">
-                {button.title}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="status">
-        <div className="progress-status">
-          <CircularProgressbar
-            value={progressValue}
-            styles={progressStyles}
-          />
-        </div>
-
-        <div className="status-percentage">
-          <div className="percentage values">{bookItem.completed}</div>
-          <div className="complete values">completed</div>
-        </div>
-      </div>
-
-      <div className="chapter">
-        <div className="chapter-details">
-          <div className="current-chapter">CURRENT CHAPTER</div>
-          <span>{bookItem.chapter}</span>
-        </div>
-        <button type="button">UPDATE PROGRESS</button>
-      </div>
-    </div>
+    <div>No book</div>
   );
 };
 
