@@ -1,12 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
 
-// let counter = 0;
-
-// const generateUniqueId = () => {
-//   counter += 1;
-//   return `menu-item-${counter}`;
-// };
-
 const menuItems = [
   { id: uuidv4(), path: '/', text: 'Books' },
   { id: uuidv4(), path: 'categories', text: 'Categories' },
