@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import './addBook.css';
-import { addBook } from '../../redux/books/booksSlice';
+import { addNewBook } from '../../redux/apis';
 import { generateUniqueId } from '../navigationsLinks';
 
 const BookForm = () => {
@@ -10,7 +10,7 @@ const BookForm = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const handleAddBook = (e) => {
+  const handleAddBook = async (e) => {
     e.preventDefault();
 
     const newBook = {
@@ -19,7 +19,11 @@ const BookForm = () => {
       author,
       category: 'Fiction',
     };
-    dispatch(addBook(newBook));
+
+    dispatch(addNewBook(newBook));
+
+    // // Fetch updated books data
+    // dispatch(fetchBooks());
 
     // Reset the form inputs
     setTitle('');
@@ -35,11 +39,13 @@ const BookForm = () => {
           value={title}
           placeholder="Book title"
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
         <select
           className="drop-down"
           onChange={(e) => setAuthor(e.target.value)}
           value={author}
+          required
         >
           <option value="">Author</option>
           <option value="John Smith">John Smith</option>
