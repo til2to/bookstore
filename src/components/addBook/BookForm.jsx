@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 
 import './addBook.css';
 import { addNewBook } from '../../redux/apis';
-import { generateUniqueId } from '../navigationsLinks';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -14,16 +14,13 @@ const BookForm = () => {
     e.preventDefault();
 
     const newBook = {
-      item_id: generateUniqueId(),
+      item_id: uuidv4(),
       title,
       author,
       category: 'Fiction',
     };
 
     dispatch(addNewBook(newBook));
-
-    // // Fetch updated books data
-    // dispatch(fetchBooks());
 
     // Reset the form inputs
     setTitle('');
