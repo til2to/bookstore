@@ -11,7 +11,7 @@ ul.book {
 }
 
 .button-items {
-  color: #587894;
+  color: #4386bf;
 }
 
 .book-buttons {
@@ -41,26 +41,27 @@ ul.book {
 
 .details li:nth-child(2) {
   font-size: 25px;
+  color: #121212;
 }
 
 .details li:nth-child(3) {
-  color: #b6d0e7;
+  color: #4386bf;
 }
 
 .menu-items.book-buttons li:nth-child(1) .book-items {
   margin-bottom: 0.5%;
   font-size: 14px;
-  color: #b6d0e7;
+  color: #4386bf;
 }
 
 .menu-items.book-buttons li:nth-child(2) .book-items {
   font-size: 14px;
-  color: #b6d0e7;
+  color: #4386bf;
 }
 
 .menu-items.book-buttons li:nth-child(3) .book-items {
   font-size: 14px;
-  color: #b6d0e7;
+  color: #4386bf;
 }
 
 .status-container {
@@ -89,6 +90,10 @@ ul.book {
   font-size: 33px;
 }
 
+.percentage.values {
+  color: #121212;
+}
+
 .complete {
   color: #858694;
 }
@@ -110,7 +115,7 @@ ul.book {
 }
 
 .chapter button {
-  background-color: #1390ff;
+  background-color: #0290ff;
   color: #fff;
   border: none;
   padding: 3% 6%;
