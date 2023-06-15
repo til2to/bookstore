@@ -17,7 +17,7 @@ const getColor = (value) => {
   } if (value >= 70) {
     return '#FFA500'; // Orange color for values >= 70
   }
-  return '#1390ff'; // Red color for values < 70
+  return '#307bbe'; // Red color for values < 70
 };
 
 const Book = ({ bookItem }) => {

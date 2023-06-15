@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   font-size: large;
-  color: #1390ff;
+  color: #0290ff;
 }
 
 .menu-items {
@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   font-size: 18px;
-  color: #1390ff;
+  color: #0290ff;
   border-radius: 50%;
   border: 1px solid #e0e0e0;
   padding: 10px;
