@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 
 import './addBook.css';
-import { addBook } from '../../redux/books/booksSlice';
-import { generateUniqueId } from '../navigationsLinks';
+import { addNewBook } from '../../redux/apis';
 
 const BookForm = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const handleAddBook = (e) => {
+  const handleAddBook = async (e) => {
     e.preventDefault();
 
     const newBook = {
-      item_id: generateUniqueId(),
+      item_id: uuidv4(),
       title,
       author,
       category: 'Fiction',
     };
-    dispatch(addBook(newBook));
+
+    dispatch(addNewBook(newBook));
 
     // Reset the form inputs
     setTitle('');
@@ -35,11 +36,13 @@ const BookForm = () => {
           value={title}
           placeholder="Book title"
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
         <select
           className="drop-down"
           onChange={(e) => setAuthor(e.target.value)}
           value={author}
+          required
         >
           <option value="">Author</option>
           <option value="John Smith">John Smith</option>

@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { CircularProgressbar } from 'react-circular-progressbar';
 
 import 'react-circular-progressbar/dist/styles.css';
-import { removeBook } from '../../redux/books/booksSlice';
-
 import { bookButtons } from '../navigationsLinks';
 import './book.css';
+import { removeBook, fetchBooks } from '../../redux/apis';
 
 const progressValue = 64;
 
@@ -34,6 +33,10 @@ const Book = ({ bookItem }) => {
   const removeBookItem = (itemId) => {
     dispatch(removeBook(itemId));
   };
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
 
   if (!bookItem) {
     return (

@@ -1,19 +1,14 @@
-let counter = 0;
-
-const generateUniqueId = () => {
-  counter += 1;
-  return `menu-item-${counter}`;
-};
+import { v4 as uuidv4 } from 'uuid';
 
 const menuItems = [
-  { id: generateUniqueId(), path: '/', text: 'Books' },
-  { id: generateUniqueId(), path: 'categories', text: 'Categories' },
+  { id: uuidv4(), path: '/', text: 'Books' },
+  { id: uuidv4(), path: 'categories', text: 'Categories' },
 ];
 
 const bookButtons = [
-  { id: generateUniqueId(), title: 'Comments' },
-  { id: generateUniqueId(), title: 'Remove' },
-  { id: generateUniqueId(), title: 'Edit' },
+  { id: uuidv4(), title: 'Comments' },
+  { id: uuidv4(), title: 'Remove' },
+  { id: uuidv4(), title: 'Edit' },
 ];
 
-export { menuItems, bookButtons, generateUniqueId };
+export { menuItems, bookButtons };

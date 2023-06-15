@@ -1,13 +1,18 @@
-// import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
+import './book-list.css';
 import Book from './Book';
 import BookForm from '../addBook/BookForm';
-import './book-list.css';
-import { generateUniqueId } from '../navigationsLinks';
+import { fetchBooks } from '../../redux/apis';
 
 const BookList = () => {
+  const dispatch = useDispatch();
   const { books } = useSelector((store) => store.books);
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   return (
     <>
@@ -15,7 +20,7 @@ const BookList = () => {
         {books.length > 0 ? (
           <ul className="book">
             {books.map((bookItem) => (
-              <Book bookItem={bookItem} key={generateUniqueId()} />
+              <Book bookItem={bookItem} key={bookItem.item_id} />
             ))}
           </ul>
         )
